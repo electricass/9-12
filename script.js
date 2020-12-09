@@ -17,3 +17,28 @@ var chart = new Chart(ctx, {
     // Configuration options go here
     options: {}
 });
+
+//second one 
+
+ 
+var ctx = document.getElementById('myChart2').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+
+    // The data for our dataset
+    data: {
+        labels: ['Industrial', 'Residencial', 'Comercial', 'Otros', 'Agrícola'],
+        datasets: [{
+            label: 'My Seconds dataset',
+            backgroundColor: ['#004756', '#E4C55A', '#00646E', '#73B3C0', '#E98F3E'],
+            borderColor: '#fff',
+            data: [23, 16, 10, 10, 2]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+
