@@ -7,53 +7,9 @@
         <link rel="stylesheet" href="style.css">
       
 	    
-	    <!-- añadido -->
-	    <script>
-window.onload = function () {
-
-var chart = new CanvasJS.Chart("chartContainer", {
-	exportEnabled: true,
-	animationEnabled: true,
-	title:{
-		text: "77.090 Giga Watts hora"
-	},
-	legend:{
-		cursor: "pointer",
-		itemclick: explodePie
-	},
-	data: [{
-		type: "pie",
-		showInLegend: true,
-		toolTipContent: "{name}: <strong>{y}%</strong>",
-		indexLabel: "{name} - {y}%",
-		dataPoints: [
-			{ y: 37, name: "Carbón", exploded: true },
-			{ y: 27.4, name: "Hidráulica" },
-			{ y: 8.1, name: "Solar fotovoltaica" },
-			{ y: 2.3, name: "Biomasa" },
-			{ y: 6.2, name: "Eólica" },
-			{ y: 0.3, name: "Geotérmica" },
-			{ y: 19, name: "Gas natural"},
-			{ y:0.2, name: "Cogeneración"},
-			{ y:0.8, name: "Petróleo/diesel"}
-	
-		]
-	}]
-});
-chart.render();
-}
-
-function explodePie (e) {
-	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
-		e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
-	} else {
-		e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
-	}
-	e.chart.render();
-
-}
-</script>
-	    <!-- añadido fin -->
+	    <!-- grfico CHART.JS -->
+	   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	    <!-- fin grafico CHAR.JS -->
 	    
 	    
 	    
@@ -82,10 +38,14 @@ function explodePie (e) {
     <div class="col-12 col-sm-10 col-md-8 col-lg-6">
         <h3 class="text-center">¿Cómo obtenemos la energía en Chile?</h3>
         <p class="text-justify"> Actualmente la matriz eléctrica chilena está dominada por combustibles fósiles, no renovables y sucios, tales como el petróleo, el carbón mineral y el gas natural, a lo que se suman grandes represas de generación hidroeléctrica. </p>
-        <!-- añadido -->
-    <div class="container py-5"id="chartContainer" style="height: 300px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <!--añadido fin -->
+     
+<!-- espacio gráfico -->
+<div class=" col-12 py-5">
+<canvas id="myChart"></canvas>
+<script src="script.js"></script>
+</div>
+
+<!-- fin espacio  grafico -->
                 <p class="text-center">De 77090 Giga Watts producidos por hora</p>
                 <!-- intenta hacer un id distinto para darle enfasis -->
                 
