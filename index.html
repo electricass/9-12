@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+      
+	    
+	    <!-- añadido -->
+	    <script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	exportEnabled: true,
+	animationEnabled: true,
+	title:{
+		text: "77.090 Giga Watts hora"
+	},
+	legend:{
+		cursor: "pointer",
+		itemclick: explodePie
+	},
+	data: [{
+		type: "pie",
+		showInLegend: true,
+		toolTipContent: "{name}: <strong>{y}%</strong>",
+		indexLabel: "{name} - {y}%",
+		dataPoints: [
+			{ y: 37, name: "Carbón", exploded: true },
+			{ y: 27.4, name: "Hidráulica" },
+			{ y: 8.1, name: "Solar fotovoltaica" },
+			{ y: 2.3, name: "Biomasa" },
+			{ y: 6.2, name: "Eólica" },
+			{ y: 0.3, name: "Geotérmica" },
+			{ y: 19, name: "Gas natural"},
+			{ y:0.2, name: "Cogeneración"},
+			{ y:0.8, name: "Petróleo/diesel"}
+	
+		]
+	}]
+});
+chart.render();
+}
+
+function explodePie (e) {
+	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+		e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+	} else {
+		e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+	}
+	e.chart.render();
+
+}
+</script>
+	    <!-- añadido fin -->
+	    
+	    
+	    
+	    
+        <title>Infografía Digital</title>
+    </head>
+  <body>
+<!-- parte de arriba -->
+     <header id="titular">
+            <div class="container">
+                <div class="row h-100">
+                    <div class="col-10 mt-auto pb-5 mx-auto text-center">
+                        <h1>Política energética en Chile</h1>
+                        <h2 class="mb-5 mb-md-0">Conflictos socioambientales: el caso Alto Maipo</h2>
+                        <p class="mb-5 mb-md-0">Sofía Lira, Josefina Stuckrath, Catalina Vidal</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+<!-- fin parte de arriba -->
+
+<main>
+    <!-- inicio del body -->
+<div class="container py-2">
+<div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+        <h3 class="text-center">¿Cómo obtenemos la energía en Chile?</h3>
+        <p class="text-justify"> Actualmente la matriz eléctrica chilena está dominada por combustibles fósiles, no renovables y sucios, tales como el petróleo, el carbón mineral y el gas natural, a lo que se suman grandes represas de generación hidroeléctrica. </p>
+        <!-- añadido -->
+    <div class="container py-5"id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!--añadido fin -->
+                <p class="text-center">De 77090 Giga Watts producidos por hora</p>
+                <!-- intenta hacer un id distinto para darle enfasis -->
+                
+                <!-- añade svg rayos -->
+                <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <img class="img-fluid p-3" src="img/produccionchile.svg" onmouseover="this.src='img/produccionchileHIDRO.svg'" onmouseout="this.src='img/produccionchile.svg'">  
+        </div>
+    </div>
+</div>
+
+                <!-- fin svg rayos-->
+                
+                <h3 class="text-center" id="enfasis"> 21112 </h3>
+                <p class="text-center">son producidos en plantas Hidroeléctricas</p>                    
+ <!-- otro mapa con texto -->
+        <h3 class="text-center py-3">¿De dónde proviene la energía que consumimos?</h3>
+        <!-- intenta añadir mapas para desk and mobile version, also remember to make it interactive -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <img class="img-fluid" src="img/ChileDeskHIDRO.svg" onmouseover="this.src='img/ChileDESKALTOMAIPO.svg'" onmouseout="this.src='img/ChileDeskHIDRO.svg'">  
+        </div>
+    </div>
+</div>
+        <!-- end maps svg desk and mobile interactive -->
+                    <p class="text-justify"> Los principales sistemas eléctricos en Chile son el Sistema Interconectado Norte Grande (SING) que cubre las regiones de Arica, Iquique y Antofagasta, con el 23,7 % de la capacidad instalada del país, y cuya generación esta dominada en un 100% por centrales termoeléctricas.  </p>
+          
+                    
+ <!-- mapa cata -->               
+           <h3 class="text-center pt-5">Alto Maipo</h3>       
+          <p class="text-justify">Alto Maipo es un proyecto hidroeléctrico que contará con dos centrales de generación, por las que pasará agua proveniente de los ríos Yeso, Colorado y esteros afluentes al río Volcán, generando en conjunto hasta 531 MW de potencia.
+              (Fuente: Conoce Alto Maipo) </p>
+                     <img src="img/AltoMaipoMapa.svg" class="img-fluid py-5">
+                    <p class="text-justify">El agua desviada será devuelta en su totalidad al río Maipo en las mismas condiciones en las que se tomó y no afectará el caudal ecológico del río, tampoco el consumo de agua potable de la Región Metropolitana ni el de los agricultores.</p>
+                    
+                    
+                    
+    </div>    
+</div>
+</div>
+<!--inicio imagen mapa hover-->
+    
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <img class="img-fluid" src="img/mapa2013.png" onmouseover="this.src='img/mapa2018.png'" onmouseout="this.src='img/mapa2013.png'">  
+        </div>
+    </div>
+</div>
+
+<!--teermino imagen mapa hover -->
+
+<!-- TEXTO ANTES SECCIONES -->
+ <h3 class="text-center pt-5"> ¿Cómo afecta este proyecto al medioambiente? </h3>
+                <p class="text-center"> Lorem Ipsum dolor sit amet consecitur et al aurum argentum fraternis al met</p>   
+
+
+<!-- TERMINO TEXTO ANTES SECCIONES -->
+    
+ <!-- caja interactiva -->
+ <!--COPIA DESDE ACÁ…-->
+            <article class="bg-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 mx-auto">
+                            <!--primero o segundo, según convenga (si cambias el orden, procura cambiar todo entre <ul> hasta </ul>, incluyéndolos-->
+                            <ul class="nav nav-pills my-3 justify-content-center" id="pills-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">1</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">2</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">3</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-other-tab" data-toggle="pill" href="#pills-other" role="tab" aria-controls="pills-other" aria-selected="false">4</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="pills-other2-tab" data-toggle="pill" href="#pills-other2" role="tab" aria-controls="pills-other2" aria-selected="false">5</a>
+                                </li>
+                            </ul>
+                            <!--primero o segundo, según convenga (si cambias el orden, procura cambiar todo desde el <div> en línea 51 hasta el </div> en línea 73, incluyéndolos-->
+                            <div class="tab-content mb-5" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <h3>Emisiones al aire</h3>
+                                    <p class="lead" id="inside-interactive-box-text"> <!--lead dicta font weight weight, class aligns text to center -->
+                                        No emite CO2 en la generación eléctrica. Pero emite gas metano si el área inundada es boscosa y se descompone la vegetación (el metano es un gas de efecto invernadero 30 veces mas dañino que el CO2).
+                                    </p>
+                                    <img src="img/aguaicon.svg" width="100" height="100" class="rounded mx-auto d-block">
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <h3>Uso del agua</h3>
+                                    <p class="lead" id="inside-interactive-box-text">
+                                       Intensivo en la extracción del carbón para reducir las impurezas, e intensivo en la combustión para el enfriamiento de las turbinas en las plantas termoeléctricas. La extracción de carbón también afecta irreversiblemente lagos, ríos y ecosistemas acuáticos que inutiliza para otros usos.
+                                    </p>
+                                    <img src="img/flechasicon.svg" width="100" height="100" class="rounded mx-auto d-block">
+                                </div>
+                                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                    <h3>Descarga de agua</h3>
+                                    <p class="lead" id="inside-interactive-box-text">
+                                         Las represas afectan los ríos, los ecosistemas y las personas que dependen de los territorios inundados. El agua a menor temperatura y con menos oxígeno en los embalses destruye la fauna aguas arriba y aguas abajo. En periodos de sequía y escasez hídrica se dificulta la generación eléctrica, causando inseguridad en el abastecimiento.
+                                    </p>
+                                    <img src= "img/hidroicon.svg" width="100" height="100" class="rounded mx-auto d-block">
+                                 </div>
+                                <!-- añadido -->
+                                 <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab">
+                                    <h3>Desechos</h3>
+                                    <p class="lead" id="inside-interactive-box-text">
+                                        Los embalses generan gran cantidad de sedimentos en el área de inundación.
+                                    </p>
+                                    <img src="img/toxicoicon.svg" width="100" height="100" class="rounded mx-auto d-block">
+                                </div>
+                                <!-- mas -->
+                                <div class="tab-pane fade" id="pills-other2" role="tabpanel" aria-labelledby="pills-other2-tab">
+                                    <h3>Uso de la Tierra</h3>
+                                    <p class="lead" id="inside-interactive-box-text">
+                                       El represamiento de ríos inunda territorios, destruyendo ecosistemas, áreas de cultivo y poblados. También causa erosión aguas arriba y aguas abajo en el lecho de las cuencas, afectando la flora y los peces que dependen del río y de su ciclo.
+                                    </p>
+                                    <img src="img/arbolicon.svg" width="100" height="100" class="rounded mx-auto d-block">
+                                </div>
+                                
+                                
+                                <!-- fin añadido-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--HASTA ACÁ, Y PÉGALO EN TU HTML-->
+<!-- fin caja interactiva -->
+    
+    
+    
+    
+    
+
+
+
+</main>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+ <footer> 
+	 <div class="small text-center pt-5 pb-2">
+<p><a href="https://github.com/electricass">Electricas</a> — <a href="https://github.com/profesorfaco/dno075-2020"> Infografía Digital </a>— Viernes 11 de Diciembre, 2020</p.
+</div>
+	  </footer>
+</html>

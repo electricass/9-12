@@ -1,0 +1,87 @@
+ html, body {
+                min-height: 100%;
+                color: #fff;
+                background-color: #fffF;
+                /*noten que color y background-color se repite en header#titular*/
+            }
+header#titular {
+                min-height: 100vh;
+                color: #fff;
+                background-color: #fff;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-position: center top;
+                background-size: 100% auto;
+                background-image: url("img/back-sm.png");
+                /* Uso una imagen cuadrada para pantallas más angosta*/
+            }
+
+@media (min-width: 768px) {
+                header#titular {
+                    background-image: url("img/back-md.png");
+                    /* Uso una imagen apaisada para pantallas más anchas*/
+                }
+            }
+header#titular div.container {
+                height: 100vh; /*  Misma altura que el header */
+            }
+
+            header#titular h1 {
+                color: #2F4F4F; /* en caso quieran un texto blanco algo traslúcido */
+                font-weight: 600;
+            }
+
+            header#titular h2 {
+                color: #2F4F4F;
+                font-weight: 600; /* en caso quieran un texto blanco un poco más traslúcido que el título de primer nivel */
+            }
+
+            header#titular p {
+                color: #2F4F4F;
+                font-weight: 300; 
+            }
+
+
+body {
+    background: #fff;
+    color: #2F4F4F;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+
+}
+
+h1 {
+    background: #fff;
+    color: #2F4F4F;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    background: #fff;
+    color: #2F4F4F;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+h6 {
+    background: #fff;
+    color: #2F4F4F;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+
+p {
+    background: #fff;
+    color: #2F4F4F;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 200;}
+
+#enfasis {
+    background: #fff;
+    color: #73B3C0;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+
+}
