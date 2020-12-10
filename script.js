@@ -42,3 +42,59 @@ var chart = new Chart(ctx, {
 });
 
 
+
+
+
+//MAPA ARBOL
+anychart.onDocumentReady(function () {
+    var data = anychart.data.tree([
+        {name: 'Eurasia',
+            children:[
+                {name: 'Obtenci{on de energía en Chile', children:[
+                    {name: 'Fuentes no renovables', children:[
+                        {name:'Carbón', value: 37, capital: 'y'},
+                        {name: 'Gas Natural', value: 19, capital: 'y'},
+                        {name: 'Petróleo/Diesel', value: 0.8, capital: 'y'},
+                        {name: 'Cogeneración', value: 0.2, capital: 'y'}
+                        
+                    ]}
+
+
+                    {name: 'Fuentes renovables', children:[
+                    {name:'Hidráulica', value: 27.4, capital: 'x'},
+                    {name: 'Solar Fotovoltaica', value: 8.1, capital: 'x'},
+                    {name: 'Eólica', value: 26.2, capital: 'x'},
+                    {name: 'Biomasa', value: 2.3, capital: 'x'},
+                    {name: 'Geotérmica', value: 0.3, capital: 'x'},
+                    {},
+
+
+
+                    ]}
+
+}]);
+
+
+
+
+//                ]},
+//                {name: 'Europe', children: [
+ //                   {name: 'Northern Europe', children:[
+ //                       {name: 'Finland', value: 338424, capital: 'Helsinki'},
+ //                       {name: 'Great Britain', value: 209331, capital: 'London'},
+    //                    {name: 'Ireland', value: 84421, capital: 'Dublin'},
+  //                      {name: 'Scandinavia', value: 928057}
+      //              ]}
+        //        ]}
+   //         ]}
+   // ]);
+
+    // Creates Tree map.
+    var chart = anychart.treeMap(data);
+
+    chart.title('Create a Tree Map');
+    chart.container('mapaArbol');
+    chart.draw();
+});
+
+
