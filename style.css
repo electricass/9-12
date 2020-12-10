@@ -76,3 +76,12 @@ p {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
 }
+
+html, body, #mapaArbol {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
