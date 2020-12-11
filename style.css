@@ -79,11 +79,9 @@ p {
     font-weight: 700;
 }
 
-#mapaArbol {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+#ecuador  {
+float: right;    
+ margin: 0 0 0 15px;
 }
 
 
