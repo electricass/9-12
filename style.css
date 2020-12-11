@@ -69,6 +69,10 @@ p {
     text-align: center;
 }
 
+.text-muted{
+    opacity: 0.5;
+}
+
 #enfasis {
     color: #73b3c0;
     font-family: "Open Sans", sans-serif;
